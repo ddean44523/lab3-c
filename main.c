@@ -8,8 +8,7 @@
 #include <stdlib.h>
 #include <readline/readline.h>
 
-int sum_n(int n) 
-{
+int sum_n(int n) {
   if(n <= 1)
   {
     return(n);
@@ -19,15 +18,13 @@ int sum_n(int n)
     return(n + sum_n(n-1));
   }
 }
-void print_n(const char*s,int n)
-{
+void print_n(const char*s,int n){
   if(n >= 1){
     printf("%s\n", s);
     print_n(s,n-1);
   }
 }
-int main(void) 
-{
+int main(void) {
   char *userIntChar;
   userIntChar= readline("Enter an int: ");
   double userIntDub;
